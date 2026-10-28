@@ -1,0 +1,55 @@
+manifestVersion: 1
+id: monero-merchant-app
+storage:
+  dataRoot: data
+category: finance
+name: Monero Merchant
+version: "2.2.0-rc.2"
+tagline: Accept Monero payments in your shop
+description: >-
+  The admin dashboard needs your Umbrel login and the password shown here. The
+  vendor portal and the API stay reachable without an Umbrel login, so vendors
+  and POS devices can connect; they use their own accounts.
+
+
+  Monero Merchant is a free, open-source point-of-sale backend for accepting
+  Monero (XMR). Pair it with the Monero Merchant Android app to take payments
+  in your shop, with confirmations in seconds and no third party in between.
+
+
+  It uses your Umbrel's Monero node and runs its own wallet. Back up the wallet
+  seed from the admin dashboard's settings after installing.
+
+
+  - Admin dashboard: wallet, balances, vendors, invites, transactions and payouts
+
+  - Vendor portal: vendors sign up with an invite, set their payout address and
+  add POS devices
+
+  - Payouts to each vendor's own address
+releaseNotes: >-
+  Rebuilt on the main Monero Merchant images: a new admin dashboard at /admin/,
+  the vendor portal at the app's root, and secrets and the admin password
+  managed by Umbrel. The admin password is now the one Umbrel shows for this
+  app.
+
+developer: Monero Merchant
+website: https://moneromerchant.com
+dependencies:
+  - monero
+repo: https://github.com/Monero-Merchant/monero-merchant
+support: https://matrix.to/#/%23monero-merchant:matrix.org
+
+port: 9670
+icon: https://raw.githubusercontent.com/Monero-Merchant/umbrel-app-store/main/monero-merchant-app/icon.png
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: /admin/
+
+defaultUsername: admin
+deterministicPassword: true
+
+submitter: brainchainz
+submission: https://github.com/Monero-Merchant/monero-merchant/pulls
